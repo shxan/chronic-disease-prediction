@@ -2,7 +2,7 @@
 Creating a simple self-reported health survey of 39 questions from the original CDC NHANES questionnaire of 1829 columns by 1) applying unsupervised machine learning to group and identify comorbid diseases, and 2) applying supervised machine learning to predict hypertension, type 2 diabetes and hypercholesterolemia from the questions. 
 
 ## Executive Summary
-This 2-person project creates a condensed survey that has a high accuracy in predicting 3 common non-communicable diseases (hypertension, type 2 diabetes, hypercholesterolemia) that can be used by NGOs or governments to quickly screen a population for potential incidences and before sending these identified high risk individuals for definitive diagnostic tests. 
+This project creates a condensed survey that has a high accuracy in predicting 3 common non-communicable diseases (hypertension, type 2 diabetes, hypercholesterolemia) that can be used by NGOs or governments to quickly screen a population for potential incidences and before sending these identified high risk individuals for definitive diagnostic tests. 
 
 It aims to increase testing and hence diagnosis rates for these high prevalence diseases, without incuring much higher costs for healthcare providers and patients through unnecessary physical and lab examination. 
 
@@ -63,6 +63,8 @@ T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) ass
 
 ## Analysis Step 2 - Hypercholesterolemia - Identifying key indicators / predictors
 
+Demographics, diet-related and remaining self-reportable questionnaire were used as input in the next step to predict these diseases. Random Forest, RPART, Logit Stepwise AIC, CTree, SVM and TensorFlow model outputs were compared to identify the best model for predicting each of these 3 diseases. 
+
 ### Hypercholesterolemia - Random Forest
 
 ![hypercholesterolemia random forest importance](/graph/HChol_Short_RFImpt.png)
@@ -104,9 +106,9 @@ T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) ass
 
 ### Hypertension - Random Forest
 
-![Hypertension random forest importance](/graph/HT_Short_RFImpt.png)
+![Hypertension random forest importance](/graph/HT_Short_RFImpt.PNG)
 ![Hypertension random forest lift](/graph/HT_Short_RFLift.png)
-![Hypertension random forest plot](/graph/HT_Short_RFPlot.png)
+![Hypertension random forest plot](/graph/HT_Short_RFplot.png)
 ![Hypertension random forest confusion matrix](/graph/HT_Short_RFConf.PNG)
 ![Hypertension random forest ROC](/graph/HT_Short_RFROC.png)
 
@@ -118,14 +120,13 @@ T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) ass
 
 ### Hypertension - CTree
 
-![Hypertension CTree plot](/graph/HT_Short_CtreePlot.png)
+![Hypertension CTree plot](/graph/HT_Short_CTreePlot.png)
 ![Hypertension CTree lift](/graph/HT_Short_CtreeLift.png)
 ![Hypertension CTree confusion matrix](/graph/HT_Short_CTreeConf.PNG)
-![Hypertension CTree ROC](/graph/HT_Short_CTreeROC.png)
+![Hypertension CTree ROC](/graph/HT_Short_CtreeROC.png)
 
 ### Hypertension - Logit Stepwise AIC
 
-![Hypertension Logit plot](/graph/HT_Short_LogitPlot.png)
 ![Hypertension Logit lift](/graph/HT_Short_LogitLift.png)
 ![Hypertension Logit confusion matrix](/graph/HT_Short_LogitConf.PNG)
 ![Hypertension Logit ROC](/graph/HT_Short_LogitROC.png)
@@ -158,7 +159,7 @@ T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) ass
 ### Type 2 Diabetes - CTree
 
 ![Type 2 Diabetes CTree plot](/graph/T2D_Short_CtreePlot.png)
-![Type 2 Diabetes CTree lift](/graph/T2D_Short_CtreeLift.png)
+![Type 2 Diabetes CTree lift](/graph/T2D_Short_CTreeLift.png)
 ![Type 2 Diabetes CTree confusion matrix](/graph/T2D_Short_CTreeConf.PNG)
 ![Type 2 Diabetes CTree ROC](/graph/T2D_Short_CTreeROC.png)
 
@@ -178,3 +179,18 @@ T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) ass
 ![Type 2 Diabetes TensorFlow plot](/graph/T2D_Short_TFPlot.png)
 ![Type 2 Diabetes TensorFlow confusion matrix](/graph/T2D_Short_TFConf.PNG)
 
+## Model Selection and Simplified Questionnaire
+
+Final models were chosen based on a balance of accuracy and sensitivity. 
+
+For Hypertension prediction, TensorFlow model gave 80.9% accuracy and 91.2% sensitivity with the shortened questionnaire. 
+For Type 2 Diabetes, Logit Step-wise gave 83.7% accuracy and 81% sensitivity with the shortened questionnaire.
+For Hypercholesterolemia, Logit Step-wise gave 81.9% accuracy and 95.5% sensitivity with the shortened questionnaire.
+
+![simplified questionnaire](/graph/questions_short.PNG)
+
+## Conclusion
+
+This project showed proof-of-concept that socio-demographics and behavioral data, which can be gathered through self-reported questionnaire, are good predictors of top non-communicable diseases. The value at stake is a combined total of >100 USD billion through earlier screening, self-identification and diagnosis to reduce diseas burden over lifetime of patient. 
+
+Future potential projects include combining more years of NHANES data to conduct the analysis for other diseases and  refining the model with more data and optimised parameters to improve the accuracy and sensitivity. The study is currently limited to the US but the same can be done in other countries if similar health questionnaires are available.
