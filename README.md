@@ -36,10 +36,10 @@ K-means, PCA, association analyses were done to identify co-morbidity.
 
 4 clusters are optimal for this analysis
 
-![k-means cluster 1](/graph/kmeans_cluster_1.png)
-![k-means cluster 2](/graph/kmeans_cluster_2.png)
-![k-means cluster 3](/graph/kmeans_cluster_3.png)
-![k-means cluster 4](/graph/kmeans_cluster_4.png)
+![k-means cluster 1](/graph/kmeans_cluster_1.PNG)
+![k-means cluster 2](/graph/kmeans_cluster_2.PNG)
+![k-means cluster 3](/graph/kmeans_cluster_3.PNG)
+![k-means cluster 4](/graph/kmeans_cluster_4.PNG)
 
 ### PCA
 
@@ -61,14 +61,14 @@ Visualised by Lift
 
 T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) associations have highest support, confidence and lift and is prioritized in this project to maximize prediction accuracy of the pilot due to large number of patient records available. Insufficient data for the rest of the diseases.
 
-## Analysis Step 2 - Identifying key indicators / predictors
+## Analysis Step 2 - Hypercholesterolemia - Identifying key indicators / predictors
 
 ### Hypercholesterolemia - Random Forest
 
 ![hypercholesterolemia random forest importance](/graph/HChol_Short_RFImpt.png)
 ![hypercholesterolemia random forest lift](/graph/HChol_Short_RFLift.png)
 ![hypercholesterolemia random forest plot](/graph/HChol_Short_RFPlot.png)
-![hypercholesterolemia random forest confusion matrix](/graph/HChol_Short_RFConf.png)
+![hypercholesterolemia random forest confusion matrix](/graph/HChol_Short_RFConf.PNG)
 ![hypercholesterolemia random forest ROC](/graph/HChol_Short_RFROC.png)
 
 ### Hypercholesterolemia - RPART
@@ -81,21 +81,100 @@ T2D (type 2 diabetes), H.Choles (Hypercholesterolemia) and HT (hypertension) ass
 
 ![hypercholesterolemia CTree plot](/graph/HChol_Short_CtreePlot.png)
 ![hypercholesterolemia CTree lift](/graph/HChol_Short_CtreeLift.png)
-![hypercholesterolemia CTree confusion matrix](/graph/HChol_Short_CTreeConf.png)
+![hypercholesterolemia CTree confusion matrix](/graph/HChol_Short_CTreeConf.PNG)
 ![hypercholesterolemia CTree ROC](/graph/HChol_Short_CTreeROC.png)
 
 ### Hypercholesterolemia - Logit Stepwise AIC
 
 ![hypercholesterolemia Logit plot](/graph/HChol_Short_LogitPlot.png)
 ![hypercholesterolemia Logit lift](/graph/HChol_Short_LogitLift.png)
-![hypercholesterolemia Logit confusion matrix](/graph/HChol_Short_LogitConf.png)
+![hypercholesterolemia Logit confusion matrix](/graph/HChol_Short_LogitConf.PNG)
 ![hypercholesterolemia Logit ROC](/graph/HChol_Short_LogitROC.png)
 
 ### Hypercholesterolemia - SVM
 
-![hypercholesterolemia SVM confusion matrix](/graph/HChol_Short_SVMConf.png)
+![hypercholesterolemia SVM confusion matrix](/graph/HChol_Short_SVMConf.PNG)
 
 ### Hypercholesterolemia - TensorFlow
 
 ![hypercholesterolemia TensorFlow plot](/graph/HChol_Short_TFPlot.png)
-![hypercholesterolemia TensorFlow confusion matrix](/graph/HChol_Short_TFConf.png)
+![hypercholesterolemia TensorFlow confusion matrix](/graph/HChol_Short_TFConf.PNG)
+
+## Analysis Step 2 - Hypertension - Identifying key indicators / predictors
+
+### Hypertension - Random Forest
+
+![Hypertension random forest importance](/graph/HT_Short_RFImpt.png)
+![Hypertension random forest lift](/graph/HT_Short_RFLift.png)
+![Hypertension random forest plot](/graph/HT_Short_RFPlot.png)
+![Hypertension random forest confusion matrix](/graph/HT_Short_RFConf.PNG)
+![Hypertension random forest ROC](/graph/HT_Short_RFROC.png)
+
+### Hypertension - RPART
+
+![Hypertension RPART tree](/graph/HT_Short_RPartTree.png)
+![Hypertension RPART confusion matrix](/graph/HT_Short_RPartConf.png)
+![Hypertension RPART ROC](/graph/HT_Short_RPartROC.png)
+
+### Hypertension - CTree
+
+![Hypertension CTree plot](/graph/HT_Short_CtreePlot.png)
+![Hypertension CTree lift](/graph/HT_Short_CtreeLift.png)
+![Hypertension CTree confusion matrix](/graph/HT_Short_CTreeConf.PNG)
+![Hypertension CTree ROC](/graph/HT_Short_CTreeROC.png)
+
+### Hypertension - Logit Stepwise AIC
+
+![Hypertension Logit plot](/graph/HT_Short_LogitPlot.png)
+![Hypertension Logit lift](/graph/HT_Short_LogitLift.png)
+![Hypertension Logit confusion matrix](/graph/HT_Short_LogitConf.PNG)
+![Hypertension Logit ROC](/graph/HT_Short_LogitROC.png)
+
+### Hypertension - SVM
+
+![Hypertension SVM confusion matrix](/graph/HT_Short_SVMConf.PNG)
+
+### Hypertension - TensorFlow
+
+![Hypertension TensorFlow plot](/graph/HT_Short_TFPlot.png)
+![Hypertension TensorFlow confusion matrix](/graph/HT_Short_TFConf.PNG)
+
+## Analysis Step 2 - Type 2 Diabetes - Identifying key indicators / predictors
+
+### Type 2 Diabetes - Random Forest
+
+![Type 2 Diabetes random forest importance](/graph/T2D_Short_RFImpt.png)
+![Type 2 Diabetes random forest lift](/graph/T2D_Short_RFLift.png)
+![Type 2 Diabetes random forest plot](/graph/T2D_Short_RFPlot.png)
+![Type 2 Diabetes random forest confusion matrix](/graph/T2D_Short_RFConf.PNG)
+![Type 2 Diabetes random forest ROC](/graph/T2D_Short_RFROC.png)
+
+### Type 2 Diabetes - RPART
+
+![Type 2 Diabetes RPART tree](/graph/T2D_Short_RPartTree.png)
+![Type 2 Diabetes RPART confusion matrix](/graph/T2D_Short_RPartConf.png)
+![Type 2 Diabetes RPART ROC](/graph/T2D_Short_RPartROC.png)
+
+### Type 2 Diabetes - CTree
+
+![Type 2 Diabetes CTree plot](/graph/T2D_Short_CtreePlot.png)
+![Type 2 Diabetes CTree lift](/graph/T2D_Short_CtreeLift.png)
+![Type 2 Diabetes CTree confusion matrix](/graph/T2D_Short_CTreeConf.PNG)
+![Type 2 Diabetes CTree ROC](/graph/T2D_Short_CTreeROC.png)
+
+### Type 2 Diabetes - Logit Stepwise AIC
+
+![Type 2 Diabetes Logit plot](/graph/T2D_Short_LogitPlot.png)
+![Type 2 Diabetes Logit lift](/graph/T2D_Short_LogitLift.png)
+![Type 2 Diabetes Logit confusion matrix](/graph/T2D_Short_LogitConf.PNG)
+![Type 2 Diabetes Logit ROC](/graph/T2D_Short_LogitROC.png)
+
+### Type 2 Diabetes - SVM
+
+![Type 2 Diabetes SVM confusion matrix](/graph/T2D_Short_SVMConf.PNG)
+
+### Type 2 Diabetes - TensorFlow
+
+![Type 2 Diabetes TensorFlow plot](/graph/T2D_Short_TFPlot.png)
+![Type 2 Diabetes TensorFlow confusion matrix](/graph/T2D_Short_TFConf.PNG)
+
